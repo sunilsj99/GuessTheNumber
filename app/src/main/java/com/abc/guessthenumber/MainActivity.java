@@ -12,6 +12,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    static final int randomNumber = new Random().nextInt(101);
 
     public void GuessTheNumber(View view) {
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         Integer guessed = Integer.parseInt(number.getText().toString());
 
-        int randomNumber = new Random().nextInt(101);
+
 
         String rand = String.valueOf(randomNumber);
 
@@ -28,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
            showMessage.setText("You guessed it right");
            Toast.makeText(MainActivity.this, rand, Toast.LENGTH_LONG ).show();
        }else if(guessed >= 0 && guessed < 100){
-           showMessage.setText("You didn't Guessed it right");
+           if(guessed < randomNumber)
+             showMessage.setText("Enter a higher number");
+           else {
+               showMessage.setText("Enter a lower number");
+           }
            Toast.makeText(MainActivity.this, rand, Toast.LENGTH_LONG ).show();
         }
         else{
