@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="302dp"
-        android:textSize="18dp"
+        android:textSize="19dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -32,18 +32,26 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="166dp"
-        android:onClick="GuessTheNumber"
-        android:text="Button" />
+        android:layout_marginTop="160dp"
+        android:text="Guess" />
 
     <TextView
         android:id="@+id/showMessage"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="137dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="215dp"
+        android:layout_marginBottom="128dp"
         android:text=""
-        android:textSize="18dp" />
+        android:textSize="19dp" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:text="Reset" />
 
 </RelativeLayout>
